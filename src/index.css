@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Color de marca: bordó. Se usa como bordo-50 … bordo-900 (bg-bordo-700, text-bordo-700, etc.) */
+@theme {
+  --color-bordo-50: #fbf4f6;
+  --color-bordo-100: #f6e7eb;
+  --color-bordo-200: #ecccd5;
+  --color-bordo-300: #dca3b3;
+  --color-bordo-400: #cf7f96;
+  --color-bordo-500: #b8506f;
+  --color-bordo-600: #a33a5a;
+  --color-bordo-700: #8f2d4b;
+  --color-bordo-800: #7d2542;
+  --color-bordo-900: #651a33;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-height: 100svh;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 18mm 15mm;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 11pt;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+}
